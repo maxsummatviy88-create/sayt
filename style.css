@@ -1,0 +1,62 @@
+/* ==========================================<form
+   ГЛОБАЛЬНІ СТИЛІ ТА ЕФЕКТ СЯЙВА (GLOW)
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0b0f19; /* Темний фон, щоб білий текст виглядав ідеально */
+    color: #ffffff;
+    /* Ефект світіння для всього тексту */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 
+                 0 0 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Заголовки з підсиленим сяйвом */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+div[data-elementor-type="popup"] {
+    display: block !important;
+    position: fixed !important;
+    top: 50px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 999999 !important;
+    background: #fff !important;
+    padding: 30px !important;
+    border: 2px solid #000 !important;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5) !important;
+}
+div[data-elementor-type="popup"] {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+/* Додаємо скролбар та обмежуємо висоту вікна */
+div[data-elementor-type="popup"] {
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+}
+
+/* Налаштування для внутрішнього контейнера */
+div[data-elementor-type="popup"] .elementor-section-wrap {
+    max-height: 100% !important;
+}
+.elementor-location-popup .elementor-section-wrap,
+div[data-elementor-type="popup"] {
+    max-height: 80vh !important;
+    overflow-y: scroll !important;
+}
