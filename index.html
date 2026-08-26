@@ -4,10 +4,112 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* 1. Забираємо відступи знизу у самого футера та його внутрішніх блоків */
+footer {
+    margin-bottom: 0 !important;
+    padding-bottom: 20px !important;
+}
+
+footer * {
+    margin-bottom: 0px !important;
+}
+
+/* 2. Прибираємо білі відступи у всієї сторінки, щоб футер приліг до самого краю */
+
+    /* 1. Примусово розтягуємо футер на 100% ширини та прибираємо зазор зверху */
+footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    margin-top: 0px !important;
+    margin-bottom: -30px !important;
+    padding-top: 40px !important;
+    background-color: #0b1528 !important; /* Темно-синій фон як на макеті */
+    box-sizing: border-box !important;
+}
+
+/* 2. Прибираємо сині рамки та фони з усіх внутрішніх блоків Elementor */
+footer div, 
+footer section,
+footer [class*="elementor-widget"],
+footer [class*="elementor-column"] {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 3. Перефарбовуємо всі заголовки та посилання у футері */
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+    color: #ffffff !important;
+}
+
+footer a, footer p, footer span, footer li {
+    color: #a0aec0 !important;
+}
+
+footer a:hover {
+    color: #0084ff !important;
+}
+
+/* 4. Запобігаємо появі горизонтальної смуги прокрутки */
+html, body {
+    overflow-x: hidden !important;
+}
+  /* Примусово перетворюємо .cyg-hero на Flex-контейнер */
+  .cyg-hero {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: flex-start !important;
+      justify-content: space-between !important;
+      gap: 20px !important;
+      width: 100% !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+  }
+
+  /* Баннер зліва */
+  .cyg-hero-main {
+      width: 60% !important;
+      max-width: 60% !important;
+      flex: 0 0 60% !important;
+      float: left !important;
+  }
+
+  /* Форма справа */
+  .cyg-quote-card, 
+  #quick-quote {
+      width: 38% !important;
+      max-width: 38% !important;
+      flex: 0 0 38% !important;
+      float: right !important;
+      margin-top: 0 !important;
+      clear: none !important; /* Знімає заблоковане сповзання вниз */
+  }
+
+  /* Плашки знизу баннера в 1 рядок */
+  .cyg-trust-grid {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+  }
+
+  .cyg-trust-grid > * {
+      flex: 1 1 0% !important;
+  }
+</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link rel="stylesheet"
-        href="../../clickyourguide.com/wp-content/plugins/convertpro/assets/modules/css/cp-popup.min_ver%3D1.8.3.css"
+        href="./clickyourguide.com/wp-content/plugins/convertpro/assets/modules/css/cp-popup.min_ver%3D1.8.3.css"
         media="all">
     <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
     <script>(() => { class RocketLazyLoadScripts { constructor() { this.v = "2.0.0", this.userEvents = ["keydown", "keyup", "mousedown", "mouseup", "mousemove", "mouseover", "mouseenter", "mouseout", "mouseleave", "touchmove", "touchstart", "touchend", "touchcancel", "wheel", "click", "dblclick", "input", "visibilitychange"], this.attributeEvents = ["onblur", "onclick", "oncontextmenu", "ondblclick", "onfocus", "onmousedown", "onmouseenter", "onmouseleave", "onmousemove", "onmouseout", "onmouseover", "onmouseup", "onmousewheel", "onscroll", "onsubmit"] } async t() { this.i(), this.o(), /iP(ad|hone)/.test(navigator.userAgent) && this.h(), this.u(), this.l(this), this.m(), this.k(this), this.p(this), this._(), await Promise.all([this.R(), this.L()]), this.lastBreath = Date.now(), this.S(this), this.P(), this.D(), this.O(), this.M(), await this.C(this.delayedScripts.normal), await this.C(this.delayedScripts.defer), await this.C(this.delayedScripts.async), this.T("domReady"), await this.F(), await this.j(), await this.I(), this.T("windowLoad"), await this.A(), window.dispatchEvent(new Event("rocket-allScriptsLoaded")), this.everythingLoaded = !0, this.lastTouchEnd && await new Promise((t => setTimeout(t, 500 - Date.now() + this.lastTouchEnd))), this.H(), this.T("all"), this.U(), this.W() } i() { this.CSPIssue = sessionStorage.getItem("rocketCSPIssue"), document.addEventListener("securitypolicyviolation", (t => { this.CSPIssue || "script-src-elem" !== t.violatedDirective || "data" !== t.blockedURI || (this.CSPIssue = !0, sessionStorage.setItem("rocketCSPIssue", !0)) }), { isRocket: !0 }) } o() { window.addEventListener("pageshow", (t => { this.persisted = t.persisted, this.realWindowLoadedFired = !0 }), { isRocket: !0 }), window.addEventListener("pagehide", (() => { this.onFirstUserAction = null }), { isRocket: !0 }) } h() { let t; function e(e) { t = e } window.addEventListener("touchstart", e, { isRocket: !0 }), window.addEventListener("touchend", (function i(o) { Math.abs(o.changedTouches[0].pageX - t.changedTouches[0].pageX) < 10 && Math.abs(o.changedTouches[0].pageY - t.changedTouches[0].pageY) < 10 && o.timeStamp - t.timeStamp < 200 && (o.target.dispatchEvent(new PointerEvent("click", { target: o.target, bubbles: !0, cancelable: !0 })), event.preventDefault(), window.removeEventListener("touchstart", e, { isRocket: !0 }), window.removeEventListener("touchend", i, { isRocket: !0 })) }), { isRocket: !0 }) } q(t) { this.userActionTriggered || ("mousemove" !== t.type || this.firstMousemoveIgnored ? "keyup" === t.type || "mouseover" === t.type || "mouseout" === t.type || (this.userActionTriggered = !0, this.onFirstUserAction && this.onFirstUserAction()) : this.firstMousemoveIgnored = !0), "click" === t.type && t.preventDefault(), this.savedUserEvents.length > 0 && (t.stopPropagation(), t.stopImmediatePropagation()), "touchstart" === this.lastEvent && "touchend" === t.type && (this.lastTouchEnd = Date.now()), "click" === t.type && (this.lastTouchEnd = 0), this.lastEvent = t.type, this.savedUserEvents.push(t) } u() { this.savedUserEvents = [], this.userEventHandler = this.q.bind(this), this.userEvents.forEach((t => window.addEventListener(t, this.userEventHandler, { passive: !1, isRocket: !0 }))) } U() { this.userEvents.forEach((t => window.removeEventListener(t, this.userEventHandler, { passive: !1, isRocket: !0 }))), this.savedUserEvents.forEach((t => { t.target.dispatchEvent(new window[t.constructor.name](t.type, t)) })) } m() { this.eventsMutationObserver = new MutationObserver((t => { const e = "return false"; for (const i of t) { if ("attributes" === i.type) { const t = i.target.getAttribute(i.attributeName); t && t !== e && (i.target.setAttribute("data-rocket-" + i.attributeName, t), i.target.setAttribute(i.attributeName, e)) } "childList" === i.type && i.addedNodes.forEach((t => { if (t.nodeType === Node.ELEMENT_NODE) for (const i of t.attributes) this.attributeEvents.includes(i.name) && i.value && "" !== i.value && (t.setAttribute("data-rocket-" + i.name, i.value), t.setAttribute(i.name, e)) })) } })), this.eventsMutationObserver.observe(document, { subtree: !0, childList: !0, attributeFilter: this.attributeEvents }) } H() { this.eventsMutationObserver.disconnect(), this.attributeEvents.forEach((t => { document.querySelectorAll("[data-rocket-" + t + "]").forEach((e => { e.setAttribute(t, e.getAttribute("data-rocket-" + t)), e.removeAttribute("data-rocket-" + t) })) })) } k(t) { Object.defineProperty(HTMLElement.prototype, "onclick", { get() { return this.rocketonclick }, set(e) { this.rocketonclick = e, this.setAttribute(t.everythingLoaded ? "onclick" : "data-rocket-onclick", "this.rocketonclick(event)") } }) } S(t) { function e(e, i) { let o = e[i]; e[i] = null, Object.defineProperty(e, i, { get: () => o, set(s) { t.everythingLoaded ? o = s : e["rocket" + i] = o = s } }) } e(document, "onreadystatechange"), e(window, "onload"), e(window, "onpageshow"); try { Object.defineProperty(document, "readyState", { get: () => t.rocketReadyState, set(e) { t.rocketReadyState = e }, configurable: !0 }), document.readyState = "loading" } catch (t) { console.log("WPRocket DJE readyState conflict, bypassing") } } l(t) { this.originalAddEventListener = EventTarget.prototype.addEventListener, this.originalRemoveEventListener = EventTarget.prototype.removeEventListener, this.savedEventListeners = [], EventTarget.prototype.addEventListener = function (e, i, o) { o && o.isRocket || !t.B(e, this) && !t.userEvents.includes(e) || t.B(e, this) && !t.userActionTriggered || e.startsWith("rocket-") ? t.originalAddEventListener.call(this, e, i, o) : t.savedEventListeners.push({ target: this, remove: !1, type: e, func: i, options: o }) }, EventTarget.prototype.removeEventListener = function (e, i, o) { o && o.isRocket || !t.B(e, this) && !t.userEvents.includes(e) || t.B(e, this) && !t.userActionTriggered || e.startsWith("rocket-") ? t.originalRemoveEventListener.call(this, e, i, o) : t.savedEventListeners.push({ target: this, remove: !0, type: e, func: i, options: o }) } } T(t) { "all" === t && (EventTarget.prototype.addEventListener = this.originalAddEventListener, EventTarget.prototype.removeEventListener = this.originalRemoveEventListener), this.savedEventListeners = this.savedEventListeners.filter((e => { let i = e.type, o = e.target || window; return "domReady" === t && "DOMContentLoaded" !== i && "readystatechange" !== i || ("windowLoad" === t && "load" !== i && "readystatechange" !== i && "pageshow" !== i || (this.B(i, o) && (i = "rocket-" + i), e.remove ? o.removeEventListener(i, e.func, e.options) : o.addEventListener(i, e.func, e.options), !1)) })) } p(t) { let e; function i(e) { return t.everythingLoaded ? e : e.split(" ").map((t => "load" === t || t.startsWith("load.") ? "rocket-jquery-load" : t)).join(" ") } function o(o) { function s(e) { const s = o.fn[e]; o.fn[e] = o.fn.init.prototype[e] = function () { return this[0] === window && t.userActionTriggered && ("string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = i(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { const e = arguments[0][t]; delete arguments[0][t], arguments[0][i(t)] = e }))), s.apply(this, arguments), this } } o && o.fn && !t.allJQueries.includes(o) && (o.fn.ready = o.fn.init.prototype.ready = function (e) { return !t.realDomReadyFired || t.userActionTriggered && !t.fauxDomReadyFired ? document.addEventListener("DOMContentLoaded", (() => e.bind(document)(o))) : parseInt(o.fn.jquery) > 2 ? setTimeout((() => e.bind(document)(o))) : e.bind(document)(o), o([]) }, s("on"), s("one"), s("off"), t.allJQueries.push(o)), e = o } t.allJQueries = [], o(window.jQuery), Object.defineProperty(window, "jQuery", { get: () => e, set(t) { o(t) } }) } P() { const t = new Map; document.write = document.writeln = function (e) { const i = document.currentScript, o = document.createRange(), s = i.parentElement; let n = t.get(i); void 0 === n && (n = i.nextSibling, t.set(i, n)); const a = document.createDocumentFragment(); o.setStart(a, 0), a.appendChild(o.createContextualFragment(e)), s.insertBefore(a, n) } } async R() { return new Promise((t => { this.userActionTriggered ? t() : this.onFirstUserAction = t })) } async L() { return new Promise((t => { document.addEventListener("DOMContentLoaded", (() => { this.realDomReadyFired = !0, t() }), { isRocket: !0 }) })) } async I() { return this.realWindowLoadedFired ? Promise.resolve() : new Promise((t => { window.addEventListener("load", t, { isRocket: !0 }) })) } M() { this.pendingScripts = []; this.scriptsMutationObserver = new MutationObserver((t => { for (const e of t) e.addedNodes.forEach((t => { "SCRIPT" !== t.tagName || t.noModule || t.isWPRocket || this.pendingScripts.push({ script: t, promise: new Promise((e => { const i = () => { const i = this.pendingScripts.findIndex((e => e.script === t)); i >= 0 && this.pendingScripts.splice(i, 1), e() }; t.addEventListener("load", i, { isRocket: !0 }), t.addEventListener("error", i, { isRocket: !0 }), setTimeout(i, 1e3) })) }) })) })), this.scriptsMutationObserver.observe(document, { childList: !0, subtree: !0 }) } async j() { await this.J(), this.pendingScripts.length ? (await this.pendingScripts[0].promise, await this.j()) : this.scriptsMutationObserver.disconnect() } D() { this.delayedScripts = { normal: [], async: [], defer: [] }, document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t => { t.hasAttribute("data-rocket-src") ? t.hasAttribute("async") && !1 !== t.async ? this.delayedScripts.async.push(t) : t.hasAttribute("defer") && !1 !== t.defer || "module" === t.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(t) : this.delayedScripts.normal.push(t) : this.delayedScripts.normal.push(t) })) } async _() { await this.L(); let t = []; document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e => { let i = e.getAttribute("data-rocket-src"); if (i && !i.startsWith("data:")) { i.startsWith("//") && (i = location.protocol + i); try { const o = new URL(i).origin; o !== location.origin && t.push({ src: o, crossOrigin: e.crossOrigin || "module" === e.getAttribute("data-rocket-type") }) } catch (t) { } } })), t = [...new Map(t.map((t => [JSON.stringify(t), t]))).values()], this.N(t, "preconnect") } async $(t) { if (await this.G(), !0 !== t.noModule || !("noModule" in HTMLScriptElement.prototype)) return new Promise((e => { let i; function o() { (i || t).setAttribute("data-rocket-status", "executed"), e() } try { if (navigator.userAgent.includes("Firefox/") || "" === navigator.vendor || this.CSPIssue) i = document.createElement("script"), [...t.attributes].forEach((t => { let e = t.nodeName; "type" !== e && ("data-rocket-type" === e && (e = "type"), "data-rocket-src" === e && (e = "src"), i.setAttribute(e, t.nodeValue)) })), t.text && (i.text = t.text), t.nonce && (i.nonce = t.nonce), i.hasAttribute("src") ? (i.addEventListener("load", o, { isRocket: !0 }), i.addEventListener("error", (() => { i.setAttribute("data-rocket-status", "failed-network"), e() }), { isRocket: !0 }), setTimeout((() => { i.isConnected || e() }), 1)) : (i.text = t.text, o()), i.isWPRocket = !0, t.parentNode.replaceChild(i, t); else { const i = t.getAttribute("data-rocket-type"), s = t.getAttribute("data-rocket-src"); i ? (t.type = i, t.removeAttribute("data-rocket-type")) : t.removeAttribute("type"), t.addEventListener("load", o, { isRocket: !0 }), t.addEventListener("error", (i => { this.CSPIssue && i.target.src.startsWith("data:") ? (console.log("WPRocket: CSP fallback activated"), t.removeAttribute("src"), this.$(t).then(e)) : (t.setAttribute("data-rocket-status", "failed-network"), e()) }), { isRocket: !0 }), s ? (t.fetchPriority = "high", t.removeAttribute("data-rocket-src"), t.src = s) : t.src = "data:text/javascript;base64," + window.btoa(unescape(encodeURIComponent(t.text))) } } catch (i) { t.setAttribute("data-rocket-status", "failed-transform"), e() } })); t.setAttribute("data-rocket-status", "skipped") } async C(t) { const e = t.shift(); return e ? (e.isConnected && await this.$(e), this.C(t)) : Promise.resolve() } O() { this.N([...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async], "preload") } N(t, e) { this.trash = this.trash || []; let i = !0; var o = document.createDocumentFragment(); t.forEach((t => { const s = t.getAttribute && t.getAttribute("data-rocket-src") || t.src; if (s && !s.startsWith("data:")) { const n = document.createElement("link"); n.href = s, n.rel = e, "preconnect" !== e && (n.as = "script", n.fetchPriority = i ? "high" : "low"), t.getAttribute && "module" === t.getAttribute("data-rocket-type") && (n.crossOrigin = !0), t.crossOrigin && (n.crossOrigin = t.crossOrigin), t.integrity && (n.integrity = t.integrity), t.nonce && (n.nonce = t.nonce), o.appendChild(n), this.trash.push(n), i = !1 } })), document.head.appendChild(o) } W() { this.trash.forEach((t => t.remove())) } async F() { try { document.readyState = "interactive" } catch (t) { } this.fauxDomReadyFired = !0; try { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this.G(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")) } catch (t) { console.error(t) } } async A() { try { document.readyState = "complete" } catch (t) { } try { await this.G(), document.dispatchEvent(new Event("rocket-readystatechange")), await this.G(), document.rocketonreadystatechange && document.rocketonreadystatechange(), await this.G(), window.dispatchEvent(new Event("rocket-load")), await this.G(), window.rocketonload && window.rocketonload(), await this.G(), this.allJQueries.forEach((t => t(window).trigger("rocket-jquery-load"))), await this.G(); const t = new Event("rocket-pageshow"); t.persisted = this.persisted, window.dispatchEvent(t), await this.G(), window.rocketonpageshow && window.rocketonpageshow({ persisted: this.persisted }) } catch (t) { console.error(t) } } async G() { Date.now() - this.lastBreath > 45 && (await this.J(), this.lastBreath = Date.now()) } async J() { return document.hidden ? new Promise((t => setTimeout(t))) : new Promise((t => requestAnimationFrame(t))) } B(t, e) { return e === document && "readystatechange" === t || (e === document && "DOMContentLoaded" === t || (e === window && "DOMContentLoaded" === t || (e === window && "load" === t || e === window && "pageshow" === t))) } static run() { (new RocketLazyLoadScripts).t() } } RocketLazyLoadScripts.run() })();</script>
@@ -27,7 +129,7 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
     <link rel="preload" data-rocket-preload="" as="image"
         href="https://clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-8.jpg" fetchpriority="high">
     <link rel="stylesheet"
-        href="../../clickyourguide.com/wp-content/cache/fonts/1/google-fonts/css/2/b/2/67cfd141aa6bff2eb2ac1009e68a7.css"
+        href="./clickyourguide.com/wp-content/cache/fonts/1/google-fonts/css/2/b/2/67cfd141aa6bff2eb2ac1009e68a7.css"
         data-wpr-hosted-gf-parameters="family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CReenie%20Beanie%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CABeeZee%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=swap">
     <meta name="description"
         content="Book the Best Kemer Private Boat Tour for up to 6 people from €450. Enjoy a private yacht rental with crystal-clear bays, swimming stops, flexible booking and direct local support.">
@@ -41,9 +143,9 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
     <meta property="og:url" content="https://clickyourguide.com/kemer-private-boat/">
     <meta property="og:site_name" content="ClickYourGuide">
     <meta property="og:updated_time" content="2026-07-30T02:11:57+03:00">
-    <meta property="og:image" content="../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2.jpg">
+    <meta property="og:image" content="./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2.jpg">
     <meta property="og:image:secure_url"
-        content="../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2.jpg">
+        content="./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2.jpg">
     <meta property="og:image:width" content="1536">
     <meta property="og:image:height" content="1024">
     <meta property="og:image:alt" content="Kemer Private Boat">
@@ -59,9 +161,9 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
         class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https://clickyourguide.com/kemer-private-boat/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://clickyourguide.com","name":"Home"}},{"@type":"ListItem","position":"2","item":{"@id":"https://clickyourguide.com/kemer-private-boat/","name":"Kemer Private Boat"}}]}]}</script>
     <!-- /Rank Math WordPress SEO plugin -->
 
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href=".//www.googletagmanager.com">
 
-    <link href="//hb.wpmucdn.com" rel="preconnect">
+    <link href=".//hb.wpmucdn.com" rel="preconnect">
     <link rel="alternate" type="application/rss+xml" title="ClickYourGuide » Feed"
         href="https://clickyourguide.com/feed/">
     <link rel="alternate" type="application/rss+xml" title="ClickYourGuide » Comments Feed"
@@ -145,10 +247,10 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
         /*# sourceURL=wp-block-styles-placeholder-inline-css */
     </style>
     <link data-minify="1" rel="stylesheet" id="nta-css-popup-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/whatsapp-for-wordpress/assets/dist/css/style_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/whatsapp-for-wordpress/assets/dist/css/style_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-engine-frontend-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-engine/assets/css/frontend_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-engine/assets/css/frontend_ver%3D1785783968.css"
         media="all">
     <style id="wp-global-styles-placeholder-inline-css">
         :root {
@@ -158,106 +260,106 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
         /*# sourceURL=wp-global-styles-placeholder-inline-css */
     </style>
     <link data-minify="1" rel="stylesheet" id="wpa-css-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/honeypot/includes/css/wpa_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/honeypot/includes/css/wpa_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="nd_elements_style-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/nd-elements/css/style_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/nd-elements/css/style_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="nd_options_style-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/nd-shortcodes/css/style_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/nd-shortcodes/css/style_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="nd_travel_style-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/nd-travel/assets/css/style_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/nd-travel/assets/css/style_ver%3D1785783968.css"
         media="all">
     <link rel="stylesheet" id="wpml-legacy-dropdown-0-css"
-        href="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min_ver%3D1.css"
+        href="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min_ver%3D1.css"
         media="all">
     <link rel="stylesheet" id="wpml-menu-item-0-css"
-        href="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min_ver%3D1.css"
+        href="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min_ver%3D1.css"
         media="all">
     <script>document.addEventListener('DOMContentLoaded', function (event) { if (typeof cpLoadCSS !== 'undefined') { cpLoadCSS('https://clickyourguide.com/wp-content/plugins/convertpro/assets/modules/css/cp-popup.min.css?ver=1.8.3', 0, 'all'); } }); </script>
     <link data-minify="1" rel="stylesheet" id="nicdark-style-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/themes/lovetravel/style_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/themes/lovetravel/style_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="elementor-custom-icons-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/uploads/elementor/custom-icons/icomoon/style_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/uploads/elementor/custom-icons/icomoon/style_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-menu-public-styles-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-menu/assets/public/css/public_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-menu/assets/public/css/public_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-popup-frontend-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-popup/assets/css/jet-popup-frontend_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-popup/assets/css/jet-popup-frontend_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="e-animation-slideInLeft-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/animations/styles/slideInLeft_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/animations/styles/slideInLeft_ver%3D1785783968.css"
         media="all">
     <link rel="stylesheet" id="elementor-frontend-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/custom-frontend_ver%3D1785783965.css"
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/custom-frontend_ver%3D1785783965.css"
         media="all">
     <link rel="stylesheet" id="e-popup-css"
-        href="../../clickyourguide.com/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min_ver%3D4.1.2.css"
+        href="./clickyourguide.com/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min_ver%3D4.1.2.css"
         media="all">
     <link rel="stylesheet" id="widget-heading-css"
-        href="../../clickyourguide.com/wp-content/plugins/elementor/assets/css/widget-heading.min_ver%3D3.35.7.css"
+        href="./clickyourguide.com/wp-content/plugins/elementor/assets/css/widget-heading.min_ver%3D3.35.7.css"
         media="all">
     <link rel="stylesheet" id="widget-icon-list-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/custom-widget-icon-list.min_ver%3D1785783965.css"
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/custom-widget-icon-list.min_ver%3D1785783965.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="e-animation-pulse-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-pulse_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-pulse_ver%3D1785783968.css"
         media="all">
     <link rel="stylesheet" id="widget-social-icons-css"
-        href="../../clickyourguide.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min_ver%3D3.35.7.css"
+        href="./clickyourguide.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min_ver%3D3.35.7.css"
         media="all">
     <link rel="stylesheet" id="e-apple-webkit-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/custom-apple-webkit.min_ver%3D1785783965.css"
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/custom-apple-webkit.min_ver%3D1785783965.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-elements-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/jet-elements_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/jet-elements_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-button-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/addons/jet-button_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/addons/jet-button_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-button-skin-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/skin/jet-button_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-elements/assets/css/skin/jet-button_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="e-animation-slideInUp-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/animations/styles/slideInUp_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/animations/styles/slideInUp_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="e-motion-fx-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor-pro/assets/css/modules/motion-fx_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor-pro/assets/css/modules/motion-fx_ver%3D1785783968.css"
         media="all">
     <link rel="stylesheet" id="jet-blocks-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/custom-jet-blocks_ver%3D1785783965%26ver%3D1.4.0.css"
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/custom-jet-blocks_ver%3D1785783965%26ver%3D1.4.0.css"
         media="all">
     <link rel="stylesheet" id="elementor-post-7862-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-7862_ver%3D1785783965.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-7862_ver%3D1785783965.css" media="all">
     <link data-minify="1" rel="stylesheet" id="jet-tabs-frontend-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-tabs/assets/css/jet-tabs-frontend_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-tabs/assets/css/jet-tabs-frontend_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="swiper-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="font-awesome-5-all-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/all_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/all_ver%3D1785783968.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="font-awesome-4-shim-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims_ver%3D1785783968.css"
         media="all">
     <link rel="stylesheet" id="elementor-post-55499-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-55499_ver%3D1785785940.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-55499_ver%3D1785785940.css" media="all">
     <link rel="stylesheet" id="elementor-post-4600-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-4600_ver%3D1785783968.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-4600_ver%3D1785783968.css" media="all">
     <link rel="stylesheet" id="elementor-post-60994-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-60994_ver%3D1785783965.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-60994_ver%3D1785783965.css" media="all">
     <link rel="stylesheet" id="elementor-post-30688-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-30688_ver%3D1785783968.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-30688_ver%3D1785783968.css" media="all">
     <link rel="stylesheet" id="elementor-post-30834-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-30834_ver%3D1785783968.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-30834_ver%3D1785783968.css" media="all">
     <link rel="stylesheet" id="elementor-post-30842-css"
-        href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-30842_ver%3D1785783968.css" media="all">
+        href="./clickyourguide.com/wp-content/uploads/elementor/css/post-30842_ver%3D1785783968.css" media="all">
     <link data-minify="1" rel="stylesheet" id="jet-smart-filters-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-smart-filters/assets/css/public_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-smart-filters/assets/css/public_ver%3D1785783968.css"
         media="all">
     <style id="jet-smart-filters-inline-css">
         .jet-filter {
@@ -268,10 +370,10 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
         /*# sourceURL=jet-smart-filters-inline-css */
     </style>
     <link rel="stylesheet" id="jquery-chosen-css"
-        href="../../clickyourguide.com/wp-content/plugins/jet-search/assets/lib/chosen/chosen.min_ver%3D1.8.7.css"
+        href="./clickyourguide.com/wp-content/plugins/jet-search/assets/lib/chosen/chosen.min_ver%3D1.8.7.css"
         media="all">
     <link data-minify="1" rel="stylesheet" id="jet-search-css"
-        href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-search/assets/css/jet-search_ver%3D1785783968.css"
+        href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jet-search/assets/css/jet-search_ver%3D1785783968.css"
         media="all">
 
 
@@ -280,9 +382,9 @@ window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"den
 window.typologySlugs = [];
 //# sourceURL=jquery-core-js-before
 });</script>
-    <script id="jquery-core-js" src="../../clickyourguide.com/wp-includes/js/jquery/jquery_ver%3D3.7.1.js"
+    <script id="jquery-core-js" src="./clickyourguide.com/wp-includes/js/jquery/jquery_ver%3D3.7.1.js"
         data-rocket-defer="" defer=""></script>
-    <script id="jquery-migrate-js" src="../../clickyourguide.com/wp-includes/js/jquery/jquery-migrate_ver%3D3.4.1.js"
+    <script id="jquery-migrate-js" src="./clickyourguide.com/wp-includes/js/jquery/jquery-migrate_ver%3D3.4.1.js"
         data-rocket-defer="" defer=""></script>
     <script id="wpml-cookie-js-extra">
         var wpml_cookies = { "wp-wpml_current_language": { "value": "en", "expires": 1, "path": "/" } };
@@ -290,15 +392,15 @@ window.typologySlugs = [];
         //# sourceURL=wpml-cookie-js-extra
     </script>
     <script data-wp-strategy="defer" defer="" id="wpml-cookie-js"
-        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie_ver%3D495000.js"></script>
+        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie_ver%3D495000.js"></script>
     <script id="wpml-legacy-dropdown-0-js"
-        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min_ver%3D1.js"
+        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/script.min_ver%3D1.js"
         data-rocket-defer="" defer=""></script>
     <script id="page-transitions-js"
-        src="../../clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/page-transitions_ver%3D4.1.2.js"
+        src="./clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/page-transitions_ver%3D4.1.2.js"
         data-rocket-defer="" defer=""></script>
     <script id="font-awesome-4-shim-js"
-        src="../../clickyourguide.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims_ver%3D3.35.7.js"
+        src="./clickyourguide.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims_ver%3D3.35.7.js"
         data-rocket-defer="" defer=""></script>
 
     <!-- Google tag (gtag.js) snippet added by Site Kit -->
@@ -801,7 +903,7 @@ gtag("config", "AW-18123931032");
         href="https://clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2-768x512.jpg">
     <style>
         .categories-bg {
-            background-image: url('../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2-768x512.jpg');
+            background-image: url('./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Boat-2-768x512.jpg');
             background-size: cover;
             background-position: center center;
         }
@@ -861,13 +963,13 @@ gtag("config", "AW-18123931032");
 
     <!-- End Google Tag Manager snippet added by Site Kit -->
     <link rel="icon"
-        href="../../clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-150x150.webp"
+        href="./clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-150x150.webp"
         sizes="32x32">
     <link rel="icon"
-        href="../../clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-300x300.webp"
+        href="./clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-300x300.webp"
         sizes="192x192">
     <link rel="apple-touch-icon"
-        href="../../clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-300x300.webp">
+        href="./clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-300x300.webp">
     <meta name="msapplication-TileImage"
         content="https://clickyourguide.com/wp-content/uploads/2025/06/cropped-favicon-02-1-scaled-1-300x300.webp">
     <style id="wp-custom-css">
@@ -917,8 +1019,11 @@ gtag("config", "AW-18123931032");
     </style>
     <meta name="generator" content="WP Rocket 3.18.1.3"
         data-wpr-features="wpr_delay_js wpr_defer_js wpr_oci wpr_image_dimensions wpr_minify_css wpr_mobile">
-    <script src="../../clickyourguide.com/wp-includes/js/twemoji_ver%3D7.0.2.js" defer=""></script>
-    <script src="../../clickyourguide.com/wp-includes/js/wp-emoji_ver%3D7.0.2.js" defer=""></script>
+    <script src="./clickyourguide.com/wp-includes/js/twemoji_ver%3D7.0.2.js" defer=""></script>
+    <script src="./clickyourguide.com/wp-includes/js/wp-emoji_ver%3D7.0.2.js" defer=""></script>
+
+
+   
 </head>
 
 <body
@@ -1004,7 +1109,7 @@ gtag("config", "AW-18123931032");
                                 <path d="M4 7h16M4 12h16M4 17h16"></path>
                             </svg>
                         </button>
-                        <a aria-label="ClickYourGuide home" class="cyg-mobile-v3__brand" href="/">
+                        <a aria-label="ClickYourGuide home" class="cyg-mobile-v3__brand" href="./">
                             <span class="cyg-mobile-v3__brand-name">
                                 <span>Click</span><span>Your</span><span>Guide</span>
                             </span>
@@ -1116,13 +1221,13 @@ gtag("config", "AW-18123931032");
                         </div>
                         <div class="cyg-hdr__main">
                             <div class="cyg-hdr__shell cyg-hdr__main-inner">
-                                <a aria-label="ClickYourGuide home" class="cyg-hdr__brand" href="/">
+                                <a aria-label="ClickYourGuide home" class="cyg-hdr__brand" href="./">
                                     <span
                                         class="cyg-hdr__brand-name"><span>Click</span><span>Your</span><span>Guide</span></span>
-                                    <span class="cyg-hdr__brand-tagline">Memorable Tours, Unbeatable Prices</span>
+                                    <span class="cyg-hdr__brand-tagline">Незабутні тури, неперевершені ціни</span>
                                 </a>
                                 <nav aria-label="Primary navigation" class="cyg-hdr__nav">
-                                    <a class="cyg-hdr__nav-link is-active" href="/">Дім</a>
+                                    <a class="cyg-hdr__nav-link is-active" href="./">Дім</a>
                                     <div class="cyg-hdr__nav-item">
                                         <button aria-expanded="false" class="cyg-hdr__nav-link cyg-hdr__nav-drop"
                                             type="button">
@@ -1144,9 +1249,9 @@ gtag("config", "AW-18123931032");
                                         href="https://clickyourguide.com/types/vip-private-yacht/">Прокат Машин</a>
                                     <a class="cyg-hdr__nav-link"
                                         href="https://clickyourguide.com/types/airport-transfer/">Аеропорт</a>
-                                    <a class="cyg-hdr__nav-link" href="/blog/">Блог</a>
-                                    <a class="cyg-hdr__nav-link" href="/about-us/">Про нас</a>
-                                    <a class="cyg-hdr__nav-link" href="/contact-us/">Контакти</a>
+                                    <a class="cyg-hdr__nav-link" href="./blog/">Блог</a>
+                                    <a class="cyg-hdr__nav-link" href="./about-us/">Про нас</a>
+                                    <a class="cyg-hdr__nav-link" href="./contact-us/">Контакти</a>
                                 </nav>
                                 <div class="cyg-hdr__actions cyg-hdr__actions--trust">
                                     <div class="gt-middle-info">
@@ -1156,7 +1261,7 @@ gtag("config", "AW-18123931032");
                                             target="_blank">
                                             <img alt="Tripadvisor Travellers' Choice Awards 2025" class="gt-award-image"
                                                 height="78" loading="eager"
-                                                src="../../clickyourguide.com/wp-content/uploads/2026/08/Tripadvisor.jpg"
+                                                src="./clickyourguide.com/wp-content/uploads/2026/08/Tripadvisor.jpg"
                                                 width="78">
                                         </a>
 
@@ -1186,7 +1291,7 @@ gtag("config", "AW-18123931032");
                                     <path d="m5 5 14 14M19 5 5 19"></path>
                                 </svg>
                             </button>
-                            <a aria-label="ClickYourGuide home" class="cyg-hdr__drawer-logo" href="/">
+                            <a aria-label="ClickYourGuide home" class="cyg-hdr__drawer-logo" href="./">
                                 <span>Click</span><span>Your</span><span>Guide</span>
                             </a>
                             <button class="cyg-hdr__drawer-language" data-cyg-locale-open="" type="button">
@@ -1197,7 +1302,7 @@ gtag("config", "AW-18123931032");
                             </button>
                         </div>
                         <div class="cyg-hdr__drawer-body">
-                            <a class="cyg-hdr__drawer-link is-active" href="/">
+                            <a class="cyg-hdr__drawer-link is-active" href="./">
                                 <svg aria-hidden="true" viewBox="0 0 24 24">
                                     <path d="m3 11 9-8 9 8"></path>
                                     <path d="M5 10v10h14V10M9 20v-6h6v6"></path>
@@ -1242,28 +1347,28 @@ gtag("config", "AW-18123931032");
                                 </svg>
                                 Airport Transfer
                             </a>
-                            <a class="cyg-hdr__drawer-link" href="/blog/">
+                            <a class="cyg-hdr__drawer-link" href="./blog/">
                                 <svg aria-hidden="true" viewBox="0 0 24 24">
                                     <path d="M5 4h12a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V4Z"></path>
                                     <path d="M8 8h8M8 12h8M8 16h5"></path>
                                 </svg>
                                 Blog
                             </a>
-                            <a class="cyg-hdr__drawer-link" href="/about-us/">
+                            <a class="cyg-hdr__drawer-link" href="./about-us/">
                                 <svg aria-hidden="true" viewBox="0 0 24 24">
                                     <circle cx="12" cy="8" r="4"></circle>
                                     <path d="M4 21a8 8 0 0 1 16 0"></path>
                                 </svg>
                                 About Us
                             </a>
-                            <a class="cyg-hdr__drawer-link" href="/contact-us/">
+                            <a class="cyg-hdr__drawer-link" href="./contact-us/">
                                 <svg aria-hidden="true" viewBox="0 0 24 24">
                                     <rect height="14" rx="2" width="18" x="3" y="5"></rect>
                                     <path d="m4 7 8 6 8-6"></path>
                                 </svg>
                                 Contact Us
                             </a>
-                            <a class="cyg-hdr__drawer-cta" href="/tour-list/">
+                            <a class="cyg-hdr__drawer-cta" href="./tour-list/">
                                 <span>Find Your Tour</span>
                                 <svg aria-hidden="true" viewBox="0 0 24 24">
                                     <path d="M5 12h14M14 6l6 6-6 6"></path>
@@ -1287,18 +1392,18 @@ gtag("config", "AW-18123931032");
                         <div class="cyg-hdr__locale-panel-body">
                             <h3>Language</h3>
                             <div class="cyg-hdr__locale-grid">
-                                <a class="is-selected" href="/"><span>🇬🇧</span>English</a>
-                                <a href="/de/"><span>🇩🇪</span>Deutsch</a>
-                                <a href="/nl/"><span>🇳🇱</span>Nederlands</a>
-                                <a href="/sv/"><span>🇸🇪</span>Svenska</a>
-                                <a href="/ru/"><span>🇷🇺</span>Русский</a>
-                                <a href="/pl/"><span>🇵🇱</span>Polski</a>
-                                <a href="/ro/"><span>🇷🇴</span>Română</a>
-                                <a href="/tr/"><span>🇹🇷</span>Türkçe</a>
-                                <a href="/da/"><span>🇩🇰</span>Dansk</a>
-                                <a href="/fi/"><span>🇫🇮</span>Suomi</a>
-                                <a href="/fr/"><span>🇫🇷</span>Français</a>
-                                <a href="/lt/"><span>🇱🇹</span>Lietuvių</a>
+                                <a class="is-selected" href="./"><span>🇬🇧</span>English</a>
+                                <a href="./de/"><span>🇩🇪</span>Deutsch</a>
+                                <a href="./nl/"><span>🇳🇱</span>Nederlands</a>
+                                <a href="./sv/"><span>🇸🇪</span>Svenska</a>
+                                <a href="./ru/"><span>🇷🇺</span>Русский</a>
+                                <a href="./pl/"><span>🇵🇱</span>Polski</a>
+                                <a href="./ro/"><span>🇷🇴</span>Română</a>
+                                <a href="./tr/"><span>🇹🇷</span>Türkçe</a>
+                                <a href="./da/"><span>🇩🇰</span>Dansk</a>
+                                <a href="./fi/"><span>🇫🇮</span>Suomi</a>
+                                <a href="./fr/"><span>🇫🇷</span>Français</a>
+                                <a href="./lt/"><span>🇱🇹</span>Lietuvių</a>
                             </div>
                             <h3>Currency</h3>
                             <div class="cyg-hdr__currency-grid">
@@ -1573,7 +1678,7 @@ gtag("config", "AW-18123931032");
                     #cyg-header-root .cyg-hdr__brand-tagline {
                         margin-top: 4px;
                         color: #5a6b85 !important;
-                        font-size: 8px;
+                        font-size: 10px;
                         font-weight: 700;
                         letter-spacing: .1px;
                         white-space: nowrap;
@@ -3435,6 +3540,7 @@ gtag("config", "AW-18123931032");
                                     height: 100%;
                                     transition: transform .75s cubic-bezier(.22, .61, .36, 1);
                                     will-change: transform
+                                    
                                 }
 
                                 .cyg-yacht-landing .cyg-hero-slide {
@@ -3634,7 +3740,7 @@ gtag("config", "AW-18123931032");
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: center;
-                                    padding: 28px;
+                                    padding: 10px;
                                     border: 1px solid var(--line);
                                     border-radius: 22px;
                                     background: #fff;
@@ -6480,16 +6586,16 @@ gtag("config", "AW-18123931032");
                                     <div class="cyg-hero-main" aria-label="Kemer private yacht photo carousel">
                                         <div class="cyg-hero-slider">
                                             <div class="cyg-hero-slide"
-                                                style="background-image:url('../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-8.jpg')">
+                                                style="background-image:url('./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-8.jpg')">
                                             </div>
                                             <div class="cyg-hero-slide"
-                                                style="background-image:url('../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-6.jpg')">
+                                                style="background-image:url('./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-6.jpg')">
                                             </div>
                                             <div class="cyg-hero-slide"
-                                                style="background-image:url('../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-3.jpg')">
+                                                style="background-image:url('./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-3.jpg')">
                                             </div>
                                             <div class="cyg-hero-slide"
-                                                style="background-image:url('../../clickyourguide.com/wp-content/uploads/2026/07/Kemer-Private-Yacht-12.jpg')">
+                                                style="background-image:url('./clickyourguide.com/wp-content/uploads/2026/07/Kemer-Private-Yacht-12.jpg')">
                                             </div>
                                         </div>
                                         <div class="cyg-hero-shade"></div>
@@ -6596,7 +6702,7 @@ gtag("config", "AW-18123931032");
                                                 зустрічі</label><input id="cyg-hotel" name="hotel"
                                                 placeholder="Наприклад: готель, вілла, ресторан або пляж" type="text">
                                         </div>
-                                        <div class="cyg-field"><label for="cyg-time">Preferred tour time</label><select
+                                        <div class="cyg-field"><label for="cyg-time">Бажаний час екскурсії</label><select
                                                 id="cyg-time" name="time">
                                                 <option value="">Вибрати час</option>
                                                 <option>Ранкова екскурсія — 09:00</option>
@@ -6667,7 +6773,7 @@ gtag("config", "AW-18123931032");
                                                 tabindex="0">
                                                 <img width="1368" height="770" decoding="async"
                                                     alt="Kemer Classic Private Yacht Cruise"
-                                                    src="../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-8.jpg"
+                                                    src="./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-8.jpg"
                                                     loading="lazy">
                                                 <button 2026=""
                                                     aria-label="View photos for Kemer Classic Private Yacht Cruise"
@@ -6724,7 +6830,7 @@ gtag("config", "AW-18123931032");
                                                 tabindex="0">
                                                 <img width="1065" height="1600" decoding="async"
                                                     alt="Kemer Luxury Family Yacht Experience"
-                                                    src="../../clickyourguide.com/wp-content/uploads/2026/07/Kemer-Private-Yacht-10.jpg"
+                                                    src="./clickyourguide.com/wp-content/uploads/2026/07/Kemer-Private-Yacht-10.jpg"
                                                     loading="lazy">
                                                 <button 2026=""
                                                     aria-label="View photos for Kemer Luxury Family Yacht Experience"
@@ -6782,7 +6888,7 @@ gtag("config", "AW-18123931032");
                                                 tabindex="0">
                                                 <img width="1280" height="720" decoding="async"
                                                     alt="Kemer VIP Large Group Yacht"
-                                                    src="../../clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-6.jpg"
+                                                    src="./clickyourguide.com/wp-content/uploads/2026/05/Kemer-Private-Yacht-6.jpg"
                                                     loading="lazy">
                                                 <button 2026="" aria-label="View photos for Kemer VIP Large Group Yacht"
                                                     class="cyg-gallery-trigger" data-gallery-images="[" https:=""
@@ -7354,7 +7460,7 @@ gtag("config", "AW-18123931032");
     if(!el) return;
 
     function formatDate(value){
-      if(!value) return 'Select a date';
+      if(!value) return 'Виберіть Дату';
       var parts=value.split('-');
       return parts.length===3 ? parts[2]+'.'+parts[1]+'.'+parts[0] : value;
     }
@@ -7740,7 +7846,7 @@ gtag("config", "AW-18123931032");
                             <style>
                                 .kemer-private-boat-cta {
                                     width: 100%;
-                                    padding: 24px 12px;
+                                    
                                     background: #ffffff;
                                     font-family: Arial, sans-serif;
                                     box-sizing: border-box;
@@ -11023,6 +11129,39 @@ gtag("config", "AW-18123931032");
 
                                                                         /* End custom CSS */
                                                                     </style>
+                                                                    </footer>				</div>
+				</div>
+		<div class="elementor-element elementor-element-72ca8346 jedv-enabled--yes e-con-full e-flex e-con e-parent" data-id="72ca8346" data-element_type="container" data-e-type="container" data-settings="{" background_background":"classic","position":"fixed","jet_parallax_layout_list":[]}"="">
+				<div class="elementor-element elementor-element-5b499c49 elementor-widget elementor-widget-jet-button" data-id="5b499c49" data-element_type="widget" data-e-type="widget" data-widget_type="jet-button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-jet-button jet-elements"><div class="jet-button__container">
+	<a class="jet-button__instance jet-button__instance--icon-left hover-effect-2" href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6MTM3OTMsInRvZ2dsZSI6ZmFsc2V9">
+		<div class="jet-button__plane jet-button__plane-normal"></div>
+		<div class="jet-button__plane jet-button__plane-hover"></div>
+		<div class="jet-button__state jet-button__state-normal">
+			<span class="jet-button__icon jet-elements-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-hand-point-right" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M512 199.652c0 23.625-20.65 43.826-44.8 43.826h-99.851c16.34 17.048 18.346 49.766-6.299 70.944 14.288 22.829 2.147 53.017-16.45 62.315C353.574 425.878 322.654 448 272 448c-2.746 0-13.276-.203-16-.195-61.971.168-76.894-31.065-123.731-38.315C120.596 407.683 112 397.599 112 385.786V214.261l.002-.001c.011-18.366 10.607-35.889 28.464-43.845 28.886-12.994 95.413-49.038 107.534-77.323 7.797-18.194 21.384-29.084 40-29.092 34.222-.014 57.752 35.098 44.119 66.908-3.583 8.359-8.312 16.67-14.153 24.918H467.2c23.45 0 44.8 20.543 44.8 43.826zM96 200v192c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V200c0-13.255 10.745-24 24-24h48c13.255 0 24 10.745 24 24zM68 368c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"></path></svg></span><span class="jet-button__label">Quick Book</span>		</div>
+		<div class="jet-button__state jet-button__state-hover">
+			<span class="jet-button__icon jet-elements-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-hand-point-right" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M512 199.652c0 23.625-20.65 43.826-44.8 43.826h-99.851c16.34 17.048 18.346 49.766-6.299 70.944 14.288 22.829 2.147 53.017-16.45 62.315C353.574 425.878 322.654 448 272 448c-2.746 0-13.276-.203-16-.195-61.971.168-76.894-31.065-123.731-38.315C120.596 407.683 112 397.599 112 385.786V214.261l.002-.001c.011-18.366 10.607-35.889 28.464-43.845 28.886-12.994 95.413-49.038 107.534-77.323 7.797-18.194 21.384-29.084 40-29.092 34.222-.014 57.752 35.098 44.119 66.908-3.583 8.359-8.312 16.67-14.153 24.918H467.2c23.45 0 44.8 20.543 44.8 43.826zM96 200v192c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V200c0-13.255 10.745-24 24-24h48c13.255 0 24 10.745 24 24zM68 368c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"></path></svg></span><span class="jet-button__label">Schnellbuchung</span>		</div>
+	</a>
+</div>
+</div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-1bbb644e elementor-widget elementor-widget-jet-button" data-id="1bbb644e" data-element_type="widget" data-e-type="widget" data-widget_type="jet-button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-jet-button jet-elements"><div class="jet-button__container">
+	<a class="jet-button__instance jet-button__instance--icon-left hover-effect-1" href="https://wa.me/447415268759?text=Hi,%20I’m%20interested%20in%20Home.Here%20is%20the%20link:%20https%3A%2F%2Fclickyourguide.com%2F" target="_blank">
+		<div class="jet-button__plane jet-button__plane-normal"></div>
+		<div class="jet-button__plane jet-button__plane-hover"></div>
+		<div class="jet-button__state jet-button__state-normal">
+			<span class="jet-button__icon jet-elements-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></span>		</div>
+		<div class="jet-button__state jet-button__state-hover">
+			<span class="jet-button__icon jet-elements-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></span>		</div>
+	</a>
+</div>
+</div>				</div>
+				</div>
+				</div>
+				</footer>
                                                                     <div data-elementor-type="jet-popup"
                                                                         data-elementor-id="30333"
                                                                         class="elementor elementor-30333"
@@ -11048,84 +11187,84 @@ gtag("config", "AW-18123931032");
                                                                                                     href="https://clickyourguide.com/kemer-private-boat/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.svg"
                                                                                                         alt="English"
                                                                                                         loading="lazy"><span>English</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/de/kemer-privatboot/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/de.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/de.svg"
                                                                                                         alt="Deutsch"
                                                                                                         loading="lazy"><span>Deutsch</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/nl/priveboot-in-kemer/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/nl.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/nl.svg"
                                                                                                         alt="Nederlands"
                                                                                                         loading="lazy"><span>Nederlands</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/sv/privat-bat-i-kemer/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/sv.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/sv.svg"
                                                                                                         alt="Svenska"
                                                                                                         loading="lazy"><span>Svenska</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/ru/%d1%87%d0%b0%d1%81%d1%82%d0%bd%d0%b0%d1%8f-%d0%bb%d0%be%d0%b4%d0%ba%d0%b0-%d0%b2-%d0%ba%d0%b5%d0%bc%d0%b5%d1%80%d0%b5/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.svg"
                                                                                                         alt="Русский"
                                                                                                         loading="lazy"><span>Русский</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/pl/prywatna-lodz-w-kemer/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/pl.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/pl.svg"
                                                                                                         alt="Polski"
                                                                                                         loading="lazy"><span>Polski</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/ro/barca-privata-in-kemer/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/ro.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/ro.svg"
                                                                                                         alt="Română"
                                                                                                         loading="lazy"><span>Română</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/tr/kemer-ozel-yat-kiralama/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/tr.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/tr.svg"
                                                                                                         alt="Türkçe"
                                                                                                         loading="lazy"><span>Türkçe</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/da/kemer-privat-bad/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/da.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/da.svg"
                                                                                                         alt="Dansk"
                                                                                                         loading="lazy"><span>Dansk</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/fi/kemerin-yksityisvene/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/fi.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/fi.svg"
                                                                                                         alt="Suomi"
                                                                                                         loading="lazy"><span>Suomi</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/fr/bateau-prive-a-kemer/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/fr.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/fr.svg"
                                                                                                         alt="Français"
                                                                                                         loading="lazy"><span>Français</span></a><a
                                                                                                     class="lang-btn "
                                                                                                     href="https://clickyourguide.com/lt/privatus-laivas-kemere/"><img
                                                                                                         width="18"
                                                                                                         height="12"
-                                                                                                        src="../../clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/lt.svg"
+                                                                                                        src="./clickyourguide.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/lt.svg"
                                                                                                         alt="Lietuvių"
                                                                                                         loading="lazy"><span>Lietuvių</span></a>
                                                                                             </div>
@@ -11519,7 +11658,7 @@ gtag("config", "AW-18123931032");
                                                                 <div class="elementor-widget-container">
                                                                     <link data-minify="1" rel="stylesheet"
                                                                         id="wp-block-library-css"
-                                                                        href="../../clickyourguide.com/wp-content/cache/min/1/wp-includes/css/dist/block-library/common_ver%3D1785783968.css"
+                                                                        href="./clickyourguide.com/wp-content/cache/min/1/wp-includes/css/dist/block-library/common_ver%3D1785783968.css"
                                                                         media="all">
                                                                     <form
                                                                         class="jet-form-builder layout-row submit-type-ajax"
@@ -12975,14 +13114,14 @@ gtag("config", "AW-18123931032");
                                                     /*# sourceURL=core-block-supports-inline-css */
                                                 </style>
                                                 <link rel="stylesheet" id="elementor-post-30333-css"
-                                                    href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-30333_ver%3D1785783980.css"
+                                                    href="./clickyourguide.com/wp-content/uploads/elementor/css/post-30333_ver%3D1785783980.css"
                                                     media="all">
                                                 <link rel="stylesheet" id="elementor-post-13793-css"
-                                                    href="../../clickyourguide.com/wp-content/uploads/elementor/css/post-13793_ver%3D1785783980.css"
+                                                    href="./clickyourguide.com/wp-content/uploads/elementor/css/post-13793_ver%3D1785783980.css"
                                                     media="all">
                                                 <link data-minify="1" rel="stylesheet"
                                                     id="jet-form-builder-frontend-css"
-                                                    href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jetformbuilder/assets/build/frontend/main_ver%3D1785783968.css"
+                                                    href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jetformbuilder/assets/build/frontend/main_ver%3D1785783968.css"
                                                     media="all">
                                                 <style id="jet-form-builder-frontend-inline-css">
                                                     .jet-sm-gb-0bb1fd01-74e1-4e34-ac3e-43bd59001951 .jet-form-builder__action-button:hover:not(:disabled) {
@@ -13005,17 +13144,17 @@ gtag("config", "AW-18123931032");
                                                 </style>
                                                 <link data-minify="1" rel="stylesheet"
                                                     id="jet-fb-blocks-v2-text-field-css"
-                                                    href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jetformbuilder/modules/blocks-v2/text-field/assets/build/frontend/field_ver%3D1785783968.css"
+                                                    href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jetformbuilder/modules/blocks-v2/text-field/assets/build/frontend/field_ver%3D1785783968.css"
                                                     media="all">
                                                 <link rel="stylesheet" id="jet-form-builder-select-autocomplete-css"
-                                                    href="../../clickyourguide.com/wp-content/plugins/jet-form-builder-select-autocomplete/assets/lib/css/select2.min_ver%3D4.0.13.css"
+                                                    href="./clickyourguide.com/wp-content/plugins/jet-form-builder-select-autocomplete/assets/lib/css/select2.min_ver%3D4.0.13.css"
                                                     media="all">
                                                 <link data-minify="1" rel="stylesheet"
                                                     id="jet-fb-option-field-select-css"
-                                                    href="../../clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jetformbuilder/modules/option-field/assets/build/select_ver%3D1785783968.css"
+                                                    href="./clickyourguide.com/wp-content/cache/min/1/wp-content/plugins/jetformbuilder/modules/option-field/assets/build/select_ver%3D1785783968.css"
                                                     media="all">
                                                 <link data-minify="1" rel="stylesheet" id="wp-block-paragraph-css"
-                                                    href="../../clickyourguide.com/wp-content/cache/min/1/wp-includes/blocks/paragraph/style_ver%3D1785783990.css"
+                                                    href="./clickyourguide.com/wp-content/cache/min/1/wp-includes/blocks/paragraph/style_ver%3D1785783990.css"
                                                     media="all">
 
                                                 <script type="rocketlazyloadscript" id="fbdl-tree-select-js"
@@ -13040,19 +13179,19 @@ wpa_field_info = {"wpa_field_name":"fjvkgd1348","wpa_field_value":167798,"wpa_ad
                                                     data-rocket-defer="" defer=""></script>
                                                 <script async="" data-wp-strategy="async" fetchpriority="low"
                                                     id="comment-reply-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/comment-reply_ver%3D7.0.2.js"></script>
+                                                    src="./clickyourguide.com/wp-includes/js/comment-reply_ver%3D7.0.2.js"></script>
                                                 <script type="rocketlazyloadscript" id="googlesitekit-consent-mode-js"
                                                     data-rocket-src="https://clickyourguide.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-8917f4bdb6ac659920cf.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="wp-hooks-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/dist/hooks_ver%3D7496969728ca0f95732d.js"></script>
+                                                    src="./clickyourguide.com/wp-includes/js/dist/hooks_ver%3D7496969728ca0f95732d.js"></script>
                                                 <script id="jet-menu-public-scripts-js-extra">
                                                     var jetMenuPublicSettings = { "version": "3.0.1.1", "ajaxUrl": "https://clickyourguide.com/wp-admin/admin-ajax.php", "isMobile": "true", "getElementorTemplateApiUrl": "https://clickyourguide.com/wp-json/jet-menu-api/v2/get-elementor-template-content", "getBlocksTemplateApiUrl": "https://clickyourguide.com/wp-json/jet-menu-api/v2/get-blocks-template-content", "menuItemsApiUrl": "https://clickyourguide.com/wp-json/jet-menu-api/v2/get-menu-items", "mobileMenuScriptUrl": "https://clickyourguide.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-mobile-menu-public-scripts.js?ver=3.0.1.1", "restNonce": "2e3a8eea64", "devMode": "false", "wpmlLanguageCode": "en", "menuSettings": { "jetMenuRollUp": "true", "jetMenuMouseleaveDelay": 500, "jetMenuMegaWidthType": "container", "jetMenuMegaWidthSelector": "", "jetMenuMegaOpenSubType": "hover", "jetMenuMegaAjax": "false" } };
                                                     var jetMenuPublicSettings = { "version": "3.0.1.1", "ajaxUrl": "https://clickyourguide.com/wp-admin/admin-ajax.php", "isMobile": "true", "getElementorTemplateApiUrl": "https://clickyourguide.com/wp-json/jet-menu-api/v2/get-elementor-template-content", "getBlocksTemplateApiUrl": "https://clickyourguide.com/wp-json/jet-menu-api/v2/get-blocks-template-content", "menuItemsApiUrl": "https://clickyourguide.com/wp-json/jet-menu-api/v2/get-menu-items", "mobileMenuScriptUrl": "https://clickyourguide.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-mobile-menu-public-scripts.js?ver=3.0.1.1", "restNonce": "2e3a8eea64", "devMode": "false", "wpmlLanguageCode": "en", "menuSettings": { "jetMenuRollUp": "true", "jetMenuMouseleaveDelay": 500, "jetMenuMegaWidthType": "container", "jetMenuMegaWidthSelector": "", "jetMenuMegaOpenSubType": "hover", "jetMenuMegaAjax": "false" } };
                                                     //# sourceURL=jet-menu-public-scripts-js-extra
                                                 </script>
                                                 <script id="jet-menu-public-scripts-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-public-scripts_ver%3D3.0.1.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-menu/assets/public/js/jet-menu-public-scripts_ver%3D3.0.1.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script type="rocketlazyloadscript"
                                                     id="jet-menu-public-scripts-js-after">
@@ -13060,29 +13199,29 @@ function CxCSSCollector(){"use strict";var t,e=window.CxCollectedCSS;void 0!==e&
 //# sourceURL=jet-menu-public-scripts-js-after
 </script>
                                                 <script id="jet-plugins-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-search/assets/lib/jet-plugins/jet-plugins_ver%3D1.0.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-search/assets/lib/jet-plugins/jet-plugins_ver%3D1.0.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-anime-js-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-elements/assets/js/lib/anime-js/anime.min_ver%3D2.2.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-elements/assets/js/lib/anime-js/anime.min_ver%3D2.2.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-popup-frontend-js-extra">
                                                     var jetPopupData = { "version": "2.2.0", "ajax_url": "https://clickyourguide.com/wp-admin/admin-ajax.php", "isElementor": "true", "accessibility": { "popupLabel": "Popup dialog", "closeButtonLabel": "Close popup" } };
                                                     //# sourceURL=jet-popup-frontend-js-extra
                                                 </script>
                                                 <script id="jet-popup-frontend-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-popup/assets/js/jet-popup-frontend_ver%3D2.2.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-popup/assets/js/jet-popup-frontend_ver%3D2.2.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="instant-page-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor-pro/assets/lib/instant-page/instant-page_ver%3D4.1.2.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor-pro/assets/lib/instant-page/instant-page_ver%3D4.1.2.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="elementor-webpack-runtime-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor/assets/js/webpack.runtime_ver%3D3.35.7.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor/assets/js/webpack.runtime_ver%3D3.35.7.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="elementor-frontend-modules-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor/assets/js/frontend-modules_ver%3D3.35.7.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor/assets/js/frontend-modules_ver%3D3.35.7.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jquery-ui-core-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/jquery/ui/core_ver%3D1.13.3.js"
+                                                    src="./clickyourguide.com/wp-includes/js/jquery/ui/core_ver%3D1.13.3.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="elementor-frontend-js-before">
                                                     var elementorFrontendConfig = {
@@ -13094,10 +13233,10 @@ function CxCSSCollector(){"use strict";var t,e=window.CxCollectedCSS;void 0!==e&
                                                     //# sourceURL=elementor-frontend-js-before
                                                 </script>
                                                 <script id="elementor-frontend-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor/assets/js/frontend_ver%3D3.35.7.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor/assets/js/frontend_ver%3D3.35.7.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="hoverIntent-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/hoverIntent_ver%3D1.10.2.js"
+                                                    src="./clickyourguide.com/wp-includes/js/hoverIntent_ver%3D1.10.2.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script type="rocketlazyloadscript" id="jet-swiper-js"
                                                     data-rocket-src="https://clickyourguide.com/wp-content/plugins/jet-woo-product-gallery/assets/lib/swiper/swiper.js?ver=5.3.6"
@@ -13111,17 +13250,17 @@ function CxCSSCollector(){"use strict";var t,e=window.CxCollectedCSS;void 0!==e&
                                                     data-rocket-src="https://clickyourguide.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-84e9a1056bc4922b7cbd.js"
                                                     defer=""></script>
                                                 <script id="jet-engine-jet-popup-compatibility-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-engine/assets/js/frontend/modules/jet-popup_ver%3D3.8.9.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-engine/assets/js/frontend/modules/jet-popup_ver%3D3.8.9.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-engine-jet-smart-filters-compatibility-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-engine/assets/js/frontend/modules/jet-smart-filters_ver%3D3.8.9.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-engine/assets/js/frontend/modules/jet-smart-filters_ver%3D3.8.9.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-engine-frontend-js-extra">
                                                     var JetEngineSettings = { "ajaxurl": "https://clickyourguide.com/wp-admin/admin-ajax.php", "ajaxlisting": "https://clickyourguide.com/kemer-private-boat/?nocache=1", "restNonce": "2e3a8eea64", "hoverActionTimeout": "400", "post_id": "55499", "sliderLibrary": "swiper", "query_builder": { "custom_ids": { "14": "faq_term_repeater", "13": "attraction_packages_query", "10": "destination_packages_query" } }, "addedPostCSS": [30834, 30842], "queried_object_id": "55499", "queried_object_class": "WP_Post" };
                                                     //# sourceURL=jet-engine-frontend-js-extra
                                                 </script>
                                                 <script id="jet-engine-frontend-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-engine/assets/js/frontend/frontend_ver%3D3.8.9.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-engine/assets/js/frontend/frontend_ver%3D3.8.9.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="cp-popup-script-js-extra">
                                                     var cp_ajax = { "url": "https://clickyourguide.com/wp-admin/admin-ajax.php", "ajax_nonce": "d67010eb0f", "assets_url": "https://clickyourguide.com/wp-content/plugins/convertpro/assets/", "not_connected_to_mailer": "This form is not connected with any mailer service! Please contact web administrator.", "timer_labels": "Years,Months,Weeks,Days,Hours,Minutes,Seconds", "timer_labels_singular": "Year,Month,Week,Day,Hour,Minute,Second", "image_on_ready": "", "cpro_mx_valid": "0", "invalid_email_id": "Invalid Email Address!" };
@@ -13131,20 +13270,20 @@ function CxCSSCollector(){"use strict";var t,e=window.CxCollectedCSS;void 0!==e&
                                                     //# sourceURL=cp-popup-script-js-extra
                                                 </script>
                                                 <script id="cp-popup-script-js" defer="defer"
-                                                    src="../../clickyourguide.com/wp-content/plugins/convertpro/assets/modules/js/cp-popup.min_ver%3D1.8.3.js"></script>
+                                                    src="./clickyourguide.com/wp-content/plugins/convertpro/assets/modules/js/cp-popup.min_ver%3D1.8.3.js"></script>
                                                 <script type="rocketlazyloadscript" id="jet-fb-deprecated-js"
                                                     data-rocket-src="https://clickyourguide.com/wp-content/plugins/jetformbuilder/modules/deprecated/assets/build/frontend.js?ver=120e75a68931b79be3f4"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="wp-i18n-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/dist/i18n_ver%3D781d11515ad3d91786ec.js"></script>
+                                                    src="./clickyourguide.com/wp-includes/js/dist/i18n_ver%3D781d11515ad3d91786ec.js"></script>
                                                 <script type="rocketlazyloadscript" id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
                                                 <script id="wp-url-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/dist/url_ver%3Dbb0f766c3d2efe497871.js"></script>
+                                                    src="./clickyourguide.com/wp-includes/js/dist/url_ver%3Dbb0f766c3d2efe497871.js"></script>
                                                 <script id="wp-api-fetch-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/dist/api-fetch_ver%3Dd7efe4dc1468d36c39b8.js"></script>
+                                                    src="./clickyourguide.com/wp-includes/js/dist/api-fetch_ver%3Dd7efe4dc1468d36c39b8.js"></script>
                                                 <script type="rocketlazyloadscript" id="wp-api-fetch-js-after">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://clickyourguide.com/wp-json/" ) );
 wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "2e3a8eea64" );
@@ -13203,17 +13342,17 @@ wp.apiFetch.nonceEndpoint = "https://clickyourguide.com/wp-admin/admin-ajax.php?
                                                     data-rocket-src="https://clickyourguide.com/wp-content/plugins/jet-form-builder-save-progress/assets/dist/jet.fb.frontend.bundle.js?ver=1.0.11"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-tween-js-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-elements/assets/js/lib/tweenjs/tweenjs.min_ver%3D2.0.2.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-elements/assets/js/lib/tweenjs/tweenjs.min_ver%3D2.0.2.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-elements-js-extra">
                                                     var jetElements = { "ajaxUrl": "https://clickyourguide.com/wp-admin/admin-ajax.php", "isMobile": "true", "templateApiUrl": "https://clickyourguide.com/wp-json/jet-elements-api/v1/elementor-template", "devMode": "false", "mapboxToken": "", "messages": { "invalidMail": "Please specify a valid e-mail" } };
                                                     //# sourceURL=jet-elements-js-extra
                                                 </script>
                                                 <script id="jet-elements-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-elements/assets/js/jet-elements_ver%3D2.9.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-elements/assets/js/jet-elements_ver%3D2.9.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="elementor-pro-webpack-runtime-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime_ver%3D4.1.2.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime_ver%3D4.1.2.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="elementor-pro-frontend-js-before">
                                                     var ElementorProFrontendConfig = {
@@ -13223,13 +13362,13 @@ wp.apiFetch.nonceEndpoint = "https://clickyourguide.com/wp-admin/admin-ajax.php?
                                                     //# sourceURL=elementor-pro-frontend-js-before
                                                 </script>
                                                 <script id="elementor-pro-frontend-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/frontend_ver%3D4.1.2.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/frontend_ver%3D4.1.2.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="pro-elements-handlers-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers_ver%3D4.1.2.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers_ver%3D4.1.2.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-blocks-jsticky-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-blocks/assets/js/lib/jsticky/jquery.jsticky_ver%3D1.1.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-blocks/assets/js/lib/jsticky/jquery.jsticky_ver%3D1.1.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-blocks-js-extra">
                                                     var jetBlocksData = { "recaptchaConfig": "" };
@@ -13240,44 +13379,44 @@ wp.apiFetch.nonceEndpoint = "https://clickyourguide.com/wp-admin/admin-ajax.php?
                                                     data-rocket-src="https://clickyourguide.com/wp-content/plugins/jet-blocks/assets/js/jet-blocks.js?ver=1.4.0"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-menu-elementor-widgets-scripts-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-menu/includes/elementor/assets/public/js/widgets-scripts_ver%3D3.0.1.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-menu/includes/elementor/assets/public/js/widgets-scripts_ver%3D3.0.1.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-popup-elementor-frontend-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-popup/includes/elementor/assets/js/jet-popup-elementor-frontend_ver%3D2.2.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-popup/includes/elementor/assets/js/jet-popup-elementor-frontend_ver%3D2.2.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-tabs-frontend-js-extra">
                                                     var JetTabsSettings = { "ajaxurl": "https://clickyourguide.com/wp-admin/admin-ajax.php", "isMobile": "true", "templateApiUrl": "https://clickyourguide.com/wp-json/jet-tabs-api/v1/elementor-template", "devMode": "false", "isSelfRequest": "" };
                                                     //# sourceURL=jet-tabs-frontend-js-extra
                                                 </script>
                                                 <script id="jet-tabs-frontend-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-tabs/assets/js/jet-tabs-frontend_ver%3D2.3.0.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-tabs/assets/js/jet-tabs-frontend_ver%3D2.3.0.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jquery-ui-datepicker-js"
-                                                    src="../../clickyourguide.com/wp-includes/js/jquery/ui/datepicker_ver%3D1.13.3.js"
+                                                    src="./clickyourguide.com/wp-includes/js/jquery/ui/datepicker_ver%3D1.13.3.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-maps-listings-user-geolocation-js-extra">
                                                     var JetMapListingGeolocationFilterData = { "initEvent": "jet-smart-filters/before-init" };
                                                     //# sourceURL=jet-maps-listings-user-geolocation-js-extra
                                                 </script>
                                                 <script id="jet-maps-listings-user-geolocation-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/user-geolocation_ver%3D3.8.9.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/user-geolocation_ver%3D3.8.9.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-maps-listings-location-distance-js-extra">
                                                     var JetMapListingLocationDistanceFilterData = { "apiAutocomplete": "https://clickyourguide.com/wp-json/jet-engine/v2/get-map-autocomplete-data/" };
                                                     //# sourceURL=jet-maps-listings-location-distance-js-extra
                                                 </script>
                                                 <script id="jet-maps-listings-location-distance-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/location-distance_ver%3D3.8.9.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/location-distance_ver%3D3.8.9.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-maps-listings-map-sync-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/map-sync_ver%3D3.8.9.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-engine/includes/modules/maps-listings/assets/js/public/map-sync_ver%3D3.8.9.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="jet-smart-filters-js-extra">
                                                     var JetSmartFilterSettings = { "ajaxurl": "https://clickyourguide.com/wp-admin/admin-ajax.php", "siteurl": "https://clickyourguide.com", "sitepath": "", "baseurl": "/kemer-private-boat/", "selectors": { "epro-archive-products": { "selector": ".elementor-widget-wc-archive-products", "action": "insert", "inDepth": false, "idPrefix": "#", "list": ".products", "item": ".product" }, "epro-archive": { "selector": ".elementor-widget-archive-posts .elementor-posts", "action": "replace", "inDepth": false, "idPrefix": "#", "list": ".elementor-posts", "item": ".elementor-post" }, "epro-loop-builder": { "selector": ".elementor-loop-container", "action": "replace", "inDepth": true, "idPrefix": "#" }, "epro-portfolio": { "selector": ".elementor-portfolio", "action": "insert", "inDepth": true, "idPrefix": "#", "item": ".elementor-portfolio-item" }, "epro-posts": { "selector": ".elementor-widget-posts .elementor-widget-container", "action": "replace", "inDepth": false, "idPrefix": "#", "list": ".elementor-posts", "item": ".elementor-post" }, "epro-products": { "selector": ".elementor-widget-woocommerce-products .elementor-widget-container", "action": "replace", "inDepth": false, "idPrefix": "#", "list": ".products", "item": ".product" }, "jet-engine": { "selector": ".jet-listing-grid.jet-listing", "action": "replace", "inDepth": true, "idPrefix": "#", "list": ".jet-listing-grid__items" }, "jsf-listing": { "selector": ".jsf-listing", "action": "replace", "inDepth": true, "idPrefix": "#", "item": ".jsf-listing__item" }, "default-woo-archive": { "selector": ".woocommerce .products", "action": "insert", "inDepth": false, "idPrefix": "#", "list": ".products", "item": ".product" }, "jet-engine-maps": { "selector": ".jet-map-listing", "action": "insert", "inDepth": true, "idPrefix": "#" } }, "queries": [], "settings": [], "misc": { "week_start": "1", "url_type": "plain", "valid_url_params": ["jsf", "tax", "meta", "date", "sort", "alphabet", "_s", "_sm", "pagenum", "plain_query", "jet-smart-filters", "jet_paged", "search", "_tax_query_", "_meta_query_", "_date_query_", "_sort_", "__s_", "geo_query", "map_sync"] }, "props": [], "extra_props": {}, "templates": { "active_tag": { "label": "\u003Cdiv class=\"jet-active-tag__label\"\u003E/% $value %/\u003Cspan class=\"jet-active-tag__label-separator\"\u003E:\u003C/span\u003E\u003C/div\u003E", "value": "\u003Cdiv class=\"jet-active-tag__val\"\u003E/% $value %/\u003C/div\u003E", "remove": "\u003Cdiv class=\"jet-active-tag__remove\"\u003E×\u003C/div\u003E" }, "active_filter": { "label": "\u003Cdiv class=\"jet-active-filter__label\"\u003E/% $value %/\u003Cspan class=\"jet-active-filter__label-separator\"\u003E:\u003C/span\u003E\u003C/div\u003E", "value": "\u003Cdiv class=\"jet-active-filter__val\"\u003E/% $value %/\u003C/div\u003E", "remove": "\u003Cdiv class=\"jet-active-filter__remove\"\u003E×\u003C/div\u003E" }, "pagination": { "item": "\u003Cdiv class=\"jet-filters-pagination__link\"\u003E/% $value %/\u003C/div\u003E", "dots": "\u003Cdiv class=\"jet-filters-pagination__dots\"\u003E…\u003C/div\u003E", "load_more": "\u003Cdiv class=\"jet-filters-pagination__link\"\u003E/% $value %/\u003C/div\u003E" } }, "plugin_settings": { "use_tabindex": "true", "use_url_aliases": "false", "url_aliases": [{ "needle": "typology ", "replacement": "type" }, { "needle": "/jsf/jet-engine:typology_packages_query/pagenum/", "replacement": "/page/" }], "provider_preloader": { "template": "\n\u003Cdiv class=\"jsf_provider-preloader\"\u003E\n\t\u003Cdiv class=\"jsf_provider-preloader-circle-clip-growing\"\u003E\n\t\t\u003Csvg width=\"0\" height=\"0\" viewBox=\"0 0 50 50\"\u003E\u003Ccircle class=\"path\" cx=\"25\" cy=\"25\" r=\"20\" fill=\"none\" stroke-width=\"5\"\u003E\u003C/circle\u003E\u003C/svg\u003E\t\u003C/div\u003E\n\u003C/div\u003E", "fixed_position": "", "fixed_edge_gap": "80" }, "url_custom_symbols": "" }, "datePickerData": { "closeText": "Done", "prevText": "Prev", "nextText": "Next", "currentText": "Today", "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "dayNamesMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], "weekHeader": "Wk" } };
                                                     //# sourceURL=jet-smart-filters-js-extra
                                                 </script>
                                                 <script id="jet-smart-filters-js"
-                                                    src="../../clickyourguide.com/wp-content/plugins/jet-smart-filters/assets/js/public_ver%3D3.8.1.js"
+                                                    src="./clickyourguide.com/wp-content/plugins/jet-smart-filters/assets/js/public_ver%3D3.8.1.js"
                                                     data-rocket-defer="" defer=""></script>
                                                 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"wpemoji":"https://clickyourguide.com/wp-includes/js/wp-emoji.js?ver=7.0.2","twemoji":"https://clickyourguide.com/wp-includes/js/twemoji.js?ver=7.0.2"}}
@@ -13806,7 +13945,7 @@ function sendToTelegram(messageText, formElement) {
     .then(res => res.json())
     .then(data => {
         if (data.ok) {
-            alert('Дякуємо! Заявку успішно надіслано.');
+            
             if (formElement) formElement.reset();
         } else {
             console.error('Telegram API Error:', data);
@@ -13874,7 +14013,7 @@ function sendToTelegram(messageText, formElement) {
     .then(res => res.json())
     .then(data => {
         if (data.ok) {
-            alert('Дякуємо! Заявку успішно надіслано.');
+            
             if (formElement) formElement.reset();
         } else {
             console.error('Telegram API Error:', data);
@@ -13972,7 +14111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         `⏰ <b>Бажаний час:</b> ${time}`;
 
             sendToTelegram(msg).then(() => {
-                alert('Дякуємо! Заявку на бронювання успішно надіслано.');
+                
                 bookingForm.reset();
             }).catch(() => alert('Помилка відправки.'));
         });
@@ -13996,7 +14135,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         `🌍 <b>Країна:</b> ${country}`;
 
             sendToTelegram(msg).then(() => {
-                alert('Дякуємо! Заявку успішно надіслано.');
+                
                 popupForm.reset();
             }).catch(() => alert('Помилка відправки.'));
         });
@@ -14005,6 +14144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
+    
 /* 1. Забезпечуємо вертикальне розташування для всіх головних блоків */
 .cyg-wrap,
 section[data-elementor-type="wp-page"] .cyg-wrap {
@@ -14064,7 +14204,7 @@ section[data-elementor-type="wp-page"] .cyg-wrap {
           mode: 'no-cors'
         })
         .then(() => {
-          ('Заявку успішно відправлено!');
+          window.location.href = 'thanks.html';
           form.reset();
         })
         .catch(error => alert('Помилка відправки: ' + error.message));
@@ -14085,48 +14225,9 @@ section[data-elementor-type="wp-page"] .cyg-wrap {
     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
   </svg>
 </a>
+
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const forms = document.querySelectorAll('form');
 
-        forms.forEach(form => {
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                const submitBtn = form.querySelector('[type="submit"]');
-                if (submitBtn) {
-                    submitBtn.disabled = true;
-                }
-
-                const formData = new FormData(form);
-
-                fetch('send.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.status === 'success') {
-                            alert('Дякуємо! Ваша заявка успішно прийнята.');
-                            form.reset();
-                        } else {
-                            alert('Помилка при відправці. Спробуйте ще раз.');
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        alert('Помилка при відправці. Спробуйте ще раз.');
-                    })
-                    .finally(() => {
-                        if (submitBtn) {
-                            submitBtn.disabled = false;
-                        }
-                    });
-            });
-        });
-    });
-</script>
 
 
 

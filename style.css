@@ -60,3 +60,16 @@ div[data-elementor-type="popup"] {
     max-height: 80vh !important;
     overflow-y: scroll !important;
 }
+/* 1. Обнули відступи в самого футера */
+.site-footer {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* 2. Обнули нижній відступ останнього блоку з копирайтом */
+.site-footer .copyright, 
+.site-footer .footer-bottom,
+.site-footer p:last-child {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
